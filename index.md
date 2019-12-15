@@ -1,6 +1,7 @@
 ---
 layout: page
-title: A Study on Food Security in Chicago
+title: "Chicago: is your food safe?"
+subtitle: A study on food security in the city, based on level of income per area and restaurant model.
 use-site-title: true
 ---
 
