@@ -1,7 +1,7 @@
 # --- General options --- #
 
 # Name of website
-title: A Study on Food Security in Chicago
+title: Chicago: is your food safe?
 
 # Short description of your site
 description: OEJP team project for ADA - EPFL
@@ -21,7 +21,7 @@ avatar: "/img/chicago.jpg"
 
 # Personalize the colors in your website. Colour values can be any valid CSS colour
 
-navbar-col: "#F5F5F5"
+navbar-col: "#B3E0F3"
 navbar-text-col: "#404040"
 navbar-children-col: "#F5F5F5"
 page-col: "#FFFFFF"
