@@ -15,7 +15,14 @@ USA is a country who puts a large importance on food and has a very diverse food
 
 We will use Chicago Department of Public Health’s corpus, containing data from inspections made in food establishments, in order to create a meaningful study on food security in the city. We would like to focus on understanding the reasons behind violations on the Public Health’s laws, and see if we can draw relations on the area environment, such as average income, geographical location or social status.
 
+<img src="img/test_map.png"
+     alt="Test map 2"
+     style="float: left; margin-right: 10px;" />
+
 We believe that conclusions extracted from such study will help to better understand this outstanding city.
+
+
+![Test map 2](img/test_map.png)
 
 # Research questions
 After considering the opportunities and limitations of the corpus, together with the feedback provided from Milestone 1, we have updated our research questions. We propose the following:
