@@ -5,7 +5,7 @@ subtitle: A study on food security in the city, based on level of income per are
 use-site-title: true
 ---
 
-<div style="text-align: justify">
+<div style="text-align: justify" markdown="1">
 
 # Title
 
