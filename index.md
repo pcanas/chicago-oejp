@@ -5,6 +5,8 @@ subtitle: A study on food security in the city, based on level of income per are
 use-site-title: true
 ---
 
+<div style="text-align: justify">
+
 # Title
 
 A study on Food Security in Chicago
@@ -17,13 +19,13 @@ We will use Chicago Department of Public Health’s corpus, containing data from
 
 <img src="img/test_map.png"
      alt="Test map 2"
-     style="float: left; margin-right: 10px; width:400px;" />
+     style="float: left; margin-right: 20px; width:350px;" />
 
 ### Title of result
 
 We believe that conclusions extracted from such study will help to better understand this outstanding city. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-<span style="clear: both;"> </span>
+<div style="clear: both;"> </div>
 
 # Research questions
 After considering the opportunities and limitations of the corpus, together with the feedback provided from Milestone 1, we have updated our research questions. We propose the following:
@@ -64,3 +66,7 @@ Additionally, we will try to support our findings with auxiliary information reg
 # Questions for TAs
 
 No questions :)
+
+
+
+</div>
