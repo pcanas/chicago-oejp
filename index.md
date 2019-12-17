@@ -17,12 +17,13 @@ We will use Chicago Department of Public Health’s corpus, containing data from
 
 <img src="img/test_map.png"
      alt="Test map 2"
-     style="float: left; margin-right: 10px;" />
+     style="float: left; margin-right: 10px; width:400px;" />
 
-We believe that conclusions extracted from such study will help to better understand this outstanding city.
+### Title of result
 
+We believe that conclusions extracted from such study will help to better understand this outstanding city. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-![Test map 2](img/test_map.png)
+<span style="clear: both;"> </span>
 
 # Research questions
 After considering the opportunities and limitations of the corpus, together with the feedback provided from Milestone 1, we have updated our research questions. We propose the following:
