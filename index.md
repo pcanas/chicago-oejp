@@ -128,10 +128,36 @@ TEXT ON WORD CLOUDS
 
 ## Part 2: Chains vs Businesses
 
+The concept of restaurant chains build upon a very simple idea: that you can get the same food regardless of where you buy it. A Big Mac in New York should taste the same as a Big Mac in Chicago. Also, quality between establishments should be the same, since the company has a reputation to live up to. Does this quality extend to food safety? Are there any differences in food safety between small businesses compared to chains?
+
+We extracted the [list of food chains](https://en.wikipedia.org/wiki/List_of_restaurant_chains_in_the_United_States) from Wikipedia to find all the big restaurant chains in the United states. For the rest of the restaurants, we assume that they are privately owned restaurants with no association to a restaurant chain.
+
+<img src="img/results_by_business_type.png"
+     alt="Important violations"
+     style="float: left; margin-right: 20px; width:350px;" />
+
+We slightly quantize the data by setting __"Pass"__ as both "Pass" and "Pass w/ Conditions", and "Fail" as just "Fail". The other rows are not connected to the safety of the establishment.
+
+<img src="img/results_by_business_type2.png"
+     alt="Important violations"
+     style="float: left; margin-right: 20px; width:350px;" />
+
+We choose the failure rate as the safety measurement, as a customer going to a restaurant that would fail an inspection is unsafe. Because the __Fischer exact test__ gives us a p-value lower than 0.01 we can deduce from the plots above that chains fail inspections less often and so are safer.  
+
+#### Violations between chains and businesses
+
+We see that the different groups are prone to making the same violations.
+However, violation 21 is clearly overrepresented in chains compared to small businesses, which corresponds to a lack of food service manager when handling hazardous foods, such as deli meats and sandwiches.
+Small businesses are highly overrepresented in: violation 25, which corresponds to toxic items not stored properly, and violation 23, which concerns date labeling refrigerated food.
 
 
+## Tying it together, are chains richer?
 
+We can find a strong correlation between high income areas and food safety, as well as a higher safety in restaurant chains compared to privately owned restaurants. The big question here is: Can we find a correlation between the percentage of restaurant chains and high income? Our hypothesis is that if a higher percentage of chains are found in more high income areas compared to low income areas, food safety is not necessarily related to the type of restaurant, and instead related to the income of an area. This is simply done by grouping the chains by their zip code, and plotting the counts against the incomes per zip code, as seen below.
 
+We find a correlation of 0.145(CHANGE!), which is a very weak correlation! For example, the area with zip code 60621, with the third highest concentration of restaurant chains, has the lowest income. In contrast to this, the area with zip code 60606 in the city center has the fourth highest concentration of restaurant chains, but the second highest income!
+
+From these results, we conclude that there are different factors that make high income areas and restaurant chains safer.
 
 
 
