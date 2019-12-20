@@ -109,17 +109,20 @@ ADD SOME TEXT TO TALK ABOUT THIS
 
 Let's analyse the most common words from the violations:
 
-<div style="float: left;">Low Income Area
-<img src="img/low_income_areas_wc.png"
-     title="Low income areas"
-     alt="Important violations"
-     style="margin-right: 20px; width:350px;" /></div>
+<div style="text-align:center">
+    <div style="float: left;">
+     <b>Low Income Area</b>
+     <br>
+     <img src="img/low_income_areas_wc.png" title="Low income areas" alt="Important violations" style="margin-right: 20px; width:350px;">
+    </div>
 
-<div style="float: right;">High Income Area
-<img src="img/high_income_areas_wc.png"
-     title="High income areas"
-     alt="Important violations"
-     style="margin-right: 20px; width:350px;" /></div>
+    <div style="float: right;">
+     <b>High Income Area</b>
+     <br>
+     <img src="img/high_income_areas_wc.png" title="High income areas" alt="Important violations" style="margin-right: 20px; width:350px;">
+    </div>
+</div>
+
 
 <div style="clear: both;"> </div>
 
