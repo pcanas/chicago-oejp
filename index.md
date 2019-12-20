@@ -95,7 +95,7 @@ There doesn't seem to be any clear bias with respect to the inspection frequency
 
 <img src="img/scatter_oob.png"
      alt="Inspection rates"
-     style="float: left; margin-right: 20px; width:350px;" />
+     style="float: left; margin-right: 20px; width:500px;" />
 
 But we can still see that areas with a lower income have a higher rate of going out of business.
 
@@ -109,11 +109,14 @@ We firstly seperate the data into two parts:
 - the low income areas, the bottom 25%
 - the high income areas, the top 25%
 
+<img src="img/violation_dist_income.png"
+     alt="Inspection rates"
+     style="margin-right: 20px; width:500px;" />
+<div style="clear: both;"> </div>
+
 By looking at the distribution of violations for these two groups we find a few key differences:
-
 - Low imcome areas had rodent-related violations more often: eg: “No evidence of rodent or insect outer openings protected/rodent proofed, a written log shall be maintained available to the inspectors.”
-- High income areas had more
-
+- High income areas had more issues with unclean personnel and working surfaces.
 
 We then use an nlp pipeline to extract which words are more common between the high and low income categories.
 
@@ -121,18 +124,18 @@ We then use an nlp pipeline to extract which words are more common between the h
     <div style="float: left;">
      <b>Low Income Area</b>
      <br>
-     <img src="img/low_income_areas_wc.png" title="Low income areas" alt="Important violations" style="margin-right: 20px; width:350px;">
+     <img src="img/low_income_areas_wc.png" title="Low income areas" alt="Word cloud for low income areas" style="margin-right: 20px; width:350px;">
     </div>
 
     <div style="float: right;">
      <b>High Income Area</b>
      <br>
-     <img src="img/high_income_areas_wc.png" title="High income areas" alt="Important violations" style="margin-right: 20px; width:350px;">
+     <img src="img/high_income_areas_wc.png" title="High income areas" alt="Word cloud for high income areas" style="margin-right: 20px; width:350px;">
     </div>
 </div>
 <div style="clear: both;"> </div>
 
-As we can see, low income areas have a much greater rodent problem than high income areas, given the great weight of the words “mice” and “droppings”. High income areas have problems concerning sushi, probably due to sushi being a more expensive meal, and sushi restaurants would not be expected to be found in low income areas.
+As we can see, low income areas have a much greater rodent problem than high income areas, given the great weight of the words “mice” and “droppings”. High income areas have more problems concerning sushi than low income areas, probably due to sushi being a more expensive meal, and sushi restaurants would not be expected to be found in low income areas.
 
 It seems that just quite simply restaurants with less financial means have more difficulty keeping a safe food environment.
 
@@ -155,15 +158,41 @@ Like before we will take a look at the specific violations themselves.
 
 #### Violations between chains and businesses
 
-We see that the different groups are prone to making the same violations.
-However, violation 21 is clearly overrepresented in chains compared to small businesses, which corresponds to a lack of food service manager when handling hazardous foods, such as deli meats and sandwiches.
+We see that the different groups are prone to making the same violations, but there are a few differences:
+
+<img src="img/violation_dist_income.png"
+     alt="Inspection rates"
+     style="margin-right: 20px; width:500px;" />
+<div style="clear: both;"> </div>
+
+Violation 21 is clearly overrepresented in chains compared to small businesses, which corresponds to a lack of a certifiedfood service manager when handling hazardous foods, such as deli meats, sandwiches fish and many others.
 Small businesses are highly overrepresented in: violation 25, which corresponds to toxic items not stored properly, and violation 23, which concerns date labeling refrigerated food.
 
 
 ## Tying it together, are chains richer?
+A perceptive reader might have noticed that there are similarities between the two parts. The bar plots concerning results for the different groups look very much the same. The fail rates for small businesses and low income areas are 22% and 23% respectively, and for restaurant chains and high income areas 16% and 18% respectively. This leads to the question: Can we find a connection between the two parts?
+Given a connection between income and chains/small businesses, we should find a strong correlation between them. Our hypothesis is that if a higher percentage of chains are found in more high-income areas compared to low-income areas, food safety is not necessarily related to the type of restaurant, and instead related to the income of an area. This is simply done by grouping the chains by their zip code, and plotting the counts against the incomes per zip code, as seen below.
 
-We can find a strong correlation between high income areas and food safety, as well as a higher safety in restaurant chains compared to privately owned restaurants. The big question here is: Can we find a correlation between the percentage of restaurant chains and high income? Our hypothesis is that if a higher percentage of chains are found in more high income areas compared to low income areas, food safety is not necessarily related to the type of restaurant, and instead related to the income of an area. This is simply done by grouping the chains by their zip code, and plotting the counts against the incomes per zip code, as seen below.
+For example, the area with the third highest concentration of restaurant chains, has the lowest income. In contrast to this, the area with the fourth highest concentration of restaurant chains has the second highest income!
 
-We find a correlation of 0.145(CHANGE!), which is a very weak correlation! For example, the area with zip code 60621, with the third highest concentration of restaurant chains, has the lowest income. In contrast to this, the area with zip code 60606 in the city center has the fourth highest concentration of restaurant chains, but the second highest income!
+This disproves eventual thoughts about connections, but to make it even more clear, we make up word clouds for chains and small businesses, and compare them to the income ones. 
 
-From these results, we conclude that there are different factors that make high income areas and restaurant chains safer.
+<div style="text-align:center">
+    <div style="float: left;">
+     <b>Chains</b>
+     <br>
+     <img src="img/chains_wc.png" title="Chains" alt="Wourd cloud for Chains" style="margin-right: 20px; width:350px;">
+    </div>
+
+    <div style="float: right;">
+     <b>Small Businesses</b>
+     <br>
+     <img src="img/sb_sc.png" title="Small Businesses" alt="Word cloud for Small Businesses" style="margin-right: 20px; width:350px;">
+    </div>
+</div>
+<div style="clear: both;"> </div>
+
+Here we don’t see any great similarities either. You can find “droppings” in the small business cloud, but otherwise it is hard to distinguish any similarities. 
+
+From these results, we conclude that there must be different factors at play making high income areas and restaurant chains safer. 
+
