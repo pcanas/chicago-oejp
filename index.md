@@ -117,7 +117,7 @@ We plot the results for the different groups in a bar graph, to re-visualize the
 
 We will slightly quantize the data by setting “Pass” as both “Pass” and “Pass w/ Conditions”, and “Fail” as just “Fail”. The other rows are not connected to the safety of the establishment.
 
-<img src="img/results_by_income_type2.png"
+<img src="img/results_by_income_type.png"
      alt="Results for incomes"
      style="float: center; margin-right: 20px; width:350px;" />
 
@@ -196,6 +196,7 @@ We can see that there is no or a very weak correlation between income chain perc
 For example, the area with the third highest concentration of restaurant chains, has the lowest income. In contrast to this, the area with the fourth highest concentration of restaurant chains has the second highest income!
 
 This disproves eventual thoughts about connections, but to make it even more clear, we will do an in-depth look at the violations for chains and small businesses.
+
 
 #### Violations between chains and small businesses
 
