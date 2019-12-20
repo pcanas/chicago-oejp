@@ -79,6 +79,7 @@ We can see from the scatter plot on the left a clear linear relationship between
 There could be many ways this data is biased, for one the inspectors might be biased against restaurants in low income areas. To get a deeper look into this we looked at the actual violations that occurred. We saw the most noticeable difference for violation 18: “No evidence of rodent or insect outer openings protected/rodent proofed, a written log shall be maintained available to the inspectors”
 
 <img src="img/violationDistribution_important.pdf"
+     type="application/pdf"
      alt="Important violations"
      style="float: right; margin-right: 20px; width:350px;" />
 
@@ -97,6 +98,7 @@ All establishments get assigned to a risk group. There are three groups:
 We will not look at the low risk group because they are so uncommon and so we don't have enough data on them.
 
 <img src="img/inspectionRate.pdf"
+     type="application/pdf"
      alt="Inspection rates"
      style="float: right; margin-right: 20px; width:350px;" />
 
