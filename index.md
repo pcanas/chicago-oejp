@@ -39,12 +39,12 @@ Below is an example with only the more relevant columns kept:
 As can be seen most of the data is has results that are either: <span style="background-color: #B3E0F3" markdown="1">__Pass__</span>, <span style="background-color: #87CEEC" markdown="1">__Pass w/ Conditions__</span> or <span style="background-color: #F3C6B3" markdown="1">__Fail__</span>. We will only be basing ourselves off that data.
 
 
-There are many different establishment types:
+There are also many different types of establishment:
 - Restaurants make up __67%__ of the data.
 - Grocery stores make up __13%__ of the data.
 - The rest of the data is __20%__ of the data.
 
-For the purpose of this work we look more closely at the restaurants.
+For the purpose of this work we only be considering restaurants.
 
 ## Part 1: Is richer safer ?
 
@@ -59,27 +59,27 @@ We have compared inspections based on the [income for each zip code](https://tow
 
 <div style="clear: both;"> </div>
 
-From the maps it is easy to see that the few areas of high income seem to have a lower fail rate than the others.
+The ma on the left shows the income per zip and the one on the right the inspection fail rate per zip. We see that the two maps mirror themselves. There are three different areas with higher incomes areas with a low fail rate. Is this necessarily true or could it be due to some bias in the data? 
 
-There could be many ways this data is biased, for one the inspectors might be biased against restaurants in low income areas. To get a deeper look into this we looked at the actual violations that occurred. We saw the most noticeable difference for violation 18: “No evidence of rodent or insect outer openings protected/rodent proofed, a written log shall be maintained available to the inspectors”
+There could be many ways that bias could appear in the data. For example, inspectors might be biased against restaurants in low income areas. 
 
 #### Are poorer areas more targeted by inspections?
 
-All establishments get assigned to a risk group. There are three groups:
+All establishments have a risk group assigned to them. These risk levels have to do with how risky the kind of food being served is. There are three groups:
 - __High risk__
 - __Medium risk__
 - __Low risk__
 
-We will not look at the low risk group because they are so uncommon that we don't have enough data on them.
+We do not look at the low risk group because they are so uncommon that not enough data is available to conclude anything.
 
-<img src="img/scatter_inspectionFreq.png"
+<img src="img/scatter_income2.png"
      alt="Inspection rates"
-     style="float: left; margin-right: 20px; width:350px;" />
-
-On the graph beside we see the average time between inspection per establishment for every zip code.
-There doesn't seem to be any clear bias visible.
-
+     style="margin-right: 20px; width:500px;" />
 <div style="clear: both;"> </div>
+
+In the graph above we see the average time between inspection per establishment for every zip code.
+There doesn't seem to be any clear bias with respect to the inspection frequency.
+
 
 <img src="img/scatter_oob.png"
      alt="Inspection rates"
@@ -87,9 +87,19 @@ There doesn't seem to be any clear bias visible.
 <div style="clear: both;"> </div>
 
 But we still see that areas with a lower income have a higher rate of going out of business.
-WHY DO WE CARE? TEXT
+Might this be related?
 
 <div style="clear: both;"> </div>
+
+<img src="img/scatter_income.png"
+     alt="Inspection rates"
+     style="float: left; margin-right: 20px; width:350px;" />
+<div style="clear: both;"> </div>
+
+To get a deeper look into this we look at the actual violations that occurred.
+ We saw the most noticeable difference for violation 18: “No evidence of rodent or insect outer openings protected/rodent proofed, a written log shall be maintained available to the inspectors”
+
+
 
 #### Checking the specific violations:
 
