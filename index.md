@@ -94,7 +94,7 @@ There doesn't seem to be any clear bias with respect to the inspection frequency
 
 
 <img src="img/scatter_oob.png"
-     alt="Inspection rates"
+     alt="Scatter Out Of Business"
      style="float: left; margin-right: 20px; width:500px;" />
 
 But we can still see that areas with a lower income have a higher rate of going out of business.
@@ -109,8 +109,16 @@ We firstly seperate the data into two parts:
 - the low income areas, the bottom 25%
 - the high income areas, the top 25%
 
+<img src="img/results_by_income_type1.png"
+     alt="Results for incomes"
+     style="float: left; margin-right: 20px; width:350px;" />
+
+First we quickly see how their inspection results are distributed to get a rougth idea baout the data.
+
+<div style="clear: both;"> </div>
+
 <img src="img/violation_dist_income.png"
-     alt="Inspection rates"
+     alt="Violation distribution for incomes"
      style="margin-right: 20px; width:500px;" />
 <div style="clear: both;"> </div>
 
@@ -170,8 +178,15 @@ Small businesses are highly overrepresented in: violation 25, which corresponds 
 
 
 ## Tying it together, are chains richer?
+
 A perceptive reader might have noticed that there are similarities between the two parts. The bar plots concerning results for the different groups look very much the same. The fail rates for small businesses and low income areas are 22% and 23% respectively, and for restaurant chains and high income areas 16% and 18% respectively. This leads to the question: Can we find a connection between the two parts?
-Given a connection between income and chains/small businesses, we should find a strong correlation between them. Our hypothesis is that if a higher percentage of chains are found in more high-income areas compared to low-income areas, food safety is not necessarily related to the type of restaurant, and instead related to the income of an area. This is simply done by grouping the chains by their zip code, and plotting the counts against the incomes per zip code, as seen below.
+Given a connection between income and chains/small businesses, we should find a strong correlation between them. Our hypothesis is that if a higher percentage of chains are found in more high-income areas compared to low-income areas, food safety is not necessarily related to the type of restaurant, and instead related to the income of an area.
+
+<img src="img/chains_vs_income.png"
+     alt="Inspection rates"
+     style="margin-right: 20px; width:500px;" />
+
+We can see that there is no or a very weak correlation between income chain percentage.
 
 For example, the area with the third highest concentration of restaurant chains, has the lowest income. In contrast to this, the area with the fourth highest concentration of restaurant chains has the second highest income!
 
