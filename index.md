@@ -21,7 +21,8 @@ Below is an example with only the more relevant columns kept:
 | 55. Physical facilities installed, maintained & clean - comments: noted stained tiles on walls and ceiling by the 3 compartment sink. Instructed to detail clean and maintain.  | 
 | 58. Allergen training as required - comments: noted certified food managers on duty with no allergen training certification. Instructed management that all food service managers are required to have the allergen training certification.|
 
-![Result distribution ](./img/results_distribution.png)
+
+![Result distribution ](./img/results_distribution_stacked_bar.png)
 
 
 As can be seen most of the data is has results that are either: __Pass__, __Pass w/ Conditions__ or __Fail__. We will only be basing ourselves off that data.
@@ -31,4 +32,18 @@ There are many different establishment types:
 - Grocery stores make up __13%__ of the data.
 - The rest of the data is __20%__ of the data.
 
-For the purpose of this work we look more closely into the restaurants.
+For the purpose of this work we look more closely at the restaurants.
+
+## Part 1: Is richer safer ?
+
+We have compared inspections based on the [income for each zip code](https://towardsdatascience.com/getting-census-data-in-5-easy-steps-a08eeb63995d)
+
+![Income Map](./img/income_map.png)
+![Fail Rate Map](./img/failRate_map.png)
+
+
+
+
+
+
+## Part 2: Chains vs Businesses
