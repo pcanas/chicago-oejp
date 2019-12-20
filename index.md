@@ -64,13 +64,72 @@ We have compared inspections based on the [income for each zip code](https://tow
 
 <div style="clear: both;"> </div>
 
-Because it is hard to see if there is any connection between failure rate and economic prosperity we created a scatter plot.
-The scatter plot shows a clear linear relationship between this two. 
-There could be many ways this data is biased, for one the inspectors might be biased against restaurants in low income areas. To get a deeper look into this we looked at the actual violations that occurred. We saw the most noticeable difference for violation 18: “NO EVIDENCE OF RODENT OR INSECT OUTER OPENINGS PROTECTED/RODENT PROOFED, A WRITTEN LOG SHALL BE MAINTAINED AVAILABLE TO THE INSPECTORS” //might also have bias because inspectors might not complain about minor things if there are rats
-We have collected the violations that show the most difference here.
-Next we took a look at if there are more Inspections in low income areas, If so that could be a reason for the higher failure rate. All establishments get assigned to a risk group. There are three groups high, medium and low risk. Low risk establishments are not common, because of too little data we will not include them in this analysis. 
+From the maps it is easy to see that the few areas of high income seem to have a lower fail rate than the others.
+
+To be sure of this we looked at the connecion between failure rates and economic prosperity.
+
+<img src="img/scatter_incomeFail.pdf"
+     alt="Income and Fails scatter map"
+     style="float: left; margin-right: 20px; width:350px;" />
+
+We can see from the scatter plot on the left a clear linear relationship between income and failure rate. 
+
+<div style="clear: both;"> </div>
+
+There could be many ways this data is biased, for one the inspectors might be biased against restaurants in low income areas. To get a deeper look into this we looked at the actual violations that occurred. We saw the most noticeable difference for violation 18: “No evidence of rodent or insect outer openings protected/rodent proofed, a written log shall be maintained available to the inspectors”
+
+<img src="img/violationDistribution_important.pdf"
+     alt="Important violations"
+     style="float: right; margin-right: 20px; width:350px;" />
+
+In the graph beside we have the violations which show the most differences.
+ADD SOME TEXT TO TALK ABOUT THIS
+
+<div style="clear: both;"> </div>
+
+#### Are poorer areas more targeted by inspections?
+
+All establishments get assigned to a risk group. There are three groups:
+- __High risk__ 
+- __Medium risk__
+- __Low risk__ 
+
+We will not look at the low risk group because they are so uncommon and so we don't have enough data on them.
+
+<img src="img/inspectionRate.pdf"
+     alt="Inspection rates"
+     style="float: right; margin-right: 20px; width:350px;" />
+
 We looked at the average number of inspections per restaurant.
+
+<div style="clear: both;"> </div>
+
 We see that there are more controls in wealthy areas. This could however be incorrect in case there are many failing businesses in low income areas, that why next we look at the interval between inspections. This reduces this bias but businesses failing early on might still draw down low income neighborhoods. If we look at all the inspection with “out of business” as a result we can see a clear correlation between neighbourhood weath a the number of failing business. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
