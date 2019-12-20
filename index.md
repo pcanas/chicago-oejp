@@ -1,4 +1,17 @@
-### Abstract
+---
+layout: page
+title: "Chicago: is your food safe?"
+subtitle: A study on food security in the city, based on level of income per area and restaurant model.
+use-site-title: true
+---
+
+<div style="text-align: justify" markdown="1">
+
+# Title
+
+A study on Food Security in Chicago
+
+# Abstract
 
 
 ## Data-set
@@ -29,6 +42,8 @@ Below is an example with only the more relevant columns kept:
 
 As can be seen most of the data is has results that are either: __Pass__, __Pass w/ Conditions__ or __Fail__. We will only be basing ourselves off that data.
 
+<div style="clear: both;"> </div>
+
 There are many different establishment types:
 - Restaurants make up __67%__ of the data.
 - Grocery stores make up __13%__ of the data.
@@ -47,7 +62,15 @@ We have compared inspections based on the [income for each zip code](https://tow
      alt="Fail Rate map"
      style="float: right; margin-right: 20px; width:350px;" />
 
+<div style="clear: both;"> </div>
 
+Because it is hard to see if there is any connection between failure rate and economic prosperity we created a scatter plot.
+The scatter plot shows a clear linear relationship between this two. 
+There could be many ways this data is biased, for one the inspectors might be biased against restaurants in low income areas. To get a deeper look into this we looked at the actual violations that occurred. We saw the most noticeable difference for violation 18: “NO EVIDENCE OF RODENT OR INSECT OUTER OPENINGS PROTECTED/RODENT PROOFED, A WRITTEN LOG SHALL BE MAINTAINED AVAILABLE TO THE INSPECTORS” //might also have bias because inspectors might not complain about minor things if there are rats
+We have collected the violations that show the most difference here.
+Next we took a look at if there are more Inspections in low income areas, If so that could be a reason for the higher failure rate. All establishments get assigned to a risk group. There are three groups high, medium and low risk. Low risk establishments are not common, because of too little data we will not include them in this analysis. 
+We looked at the average number of inspections per restaurant.
+We see that there are more controls in wealthy areas. This could however be incorrect in case there are many failing businesses in low income areas, that why next we look at the interval between inspections. This reduces this bias but businesses failing early on might still draw down low income neighborhoods. If we look at all the inspection with “out of business” as a result we can see a clear correlation between neighbourhood weath a the number of failing business. 
 
 
 
