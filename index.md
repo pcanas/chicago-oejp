@@ -113,8 +113,8 @@ We firstly seperate the data into two parts:
      alt="Results for incomes"
      style="float: left; margin-right: 20px; width:350px;" />
 
-First we quickly see how their inspection results are distributed to get a rougth idea baout the data.
-The following plot shows the 5 violations that have the largest relative difference between low and high income neighborhoods.
+First we quickly see how their inspection results are distributed to get a rough idea about the data.
+The following plot shows the 5 violations that have the largest relative ratio between low and high income neighborhoods. We propose that this will indicate interesting differences in the problems a high income area has versus a low income area. 
 
 <div style="clear: both;"> </div>
 
@@ -127,14 +127,14 @@ The Violations correspond to:
 - Violation 5: Procedures for responding to vomiting and diarrheal events.
 - Violation 22: Proper cold holding temperatures.
 - Violation 19: Outside garbage waste grease and storage area; clean, rodent proof, all containers covered
-- Violation 16: Food-contact surfaces: cleaned & sanitized - comments:', '16. food-contact surfaces: cleaned & sanitized
+- Violation 16: Food-contact surfaces: cleaned & sanitized
 - Violation 8:  Hands clean & properly washed
 
 By looking at the distribution of violations for these two groups we find a few key differences:
-- Low imcome areas had rodent-related violations more often: eg: “No evidence of rodent or insect outer openings protected/rodent proofed, a written log shall be maintained available to the inspectors.”
+- Low income areas had rodent-related violations more often: eg. “No evidence of rodent or insect outer openings protected/rodent proofed, a written log shall be maintained available to the inspectors.”
 - High income areas had more issues with unclean personnel and working surfaces.
 
-We then use an nlp pipeline to extract which words are more common between the high and low income categories.
+We then use an NLP pipeline to extract which words are more common between the high and low income categories.
 
 <div style="text-align:center">
     <div style="float: left;">
@@ -156,7 +156,7 @@ As we can see, low income areas have a much greater rodent problem than high inc
 It seems that just quite simply restaurants with less financial means have more difficulty keeping a safe food environment.
 
 
-## Part 2: Chains vs Businesses
+## Part 2: Chains vs Small Businesses
 
 The concept of restaurant chains build upon a very simple idea: that you can get the same food regardless of where you buy it. A Big Mac in New York should taste the same as a Big Mac in Chicago. Also, quality between establishments should be the same, since the company has a reputation to live up to. Does this quality extend to food safety? Are there any differences in food safety between small businesses compared to chains?
 
@@ -170,20 +170,6 @@ We extracted the [list of food chains](https://en.wikipedia.org/wiki/List_of_res
 
 We choose the failure rate as the safety measurement, as a customer going to a restaurant that would fail an inspection is quite unsafe. Because the __Fischer exact test__ gives us a p-value lower than 0.01 we can deduce from the plots above that chains fail inspections less often and so are safer.
 
-Like before we will take a look at the specific violations themselves.
-
-#### Violations between chains and businesses
-
-We see that the different groups are prone to making the same violations, but there are a few differences:
-
-<img src="img/violation_dist_income.png"
-     alt="Inspection rates"
-     style="margin-right: 20px; width:500px;" />
-<div style="clear: both;"> </div>
-
-Violation 21 is clearly overrepresented in chains compared to small businesses, which corresponds to a lack of a certifiedfood service manager when handling hazardous foods, such as deli meats, sandwiches fish and many others.
-Small businesses are highly overrepresented in: violation 25, which corresponds to toxic items not stored properly, and violation 23, which concerns date labeling refrigerated food.
-
 
 ## Tying it together, are chains richer?
 
@@ -194,11 +180,21 @@ Given a connection between income and chains/small businesses, we should find a 
      alt="Inspection rates"
      style="margin-right: 20px; width:500px;" />
 
-We can see that there is no or a very weak correlation between income chain percentage.
+We can see that there is no or a very weak correlation between income chain percentage, and we find a correlation of only 0.14.
 
 For example, the area with the third highest concentration of restaurant chains, has the lowest income. In contrast to this, the area with the fourth highest concentration of restaurant chains has the second highest income!
 
-This disproves eventual thoughts about connections, but to make it even more clear, we make up word clouds for chains and small businesses, and compare them to the income ones. 
+This disproves eventual thoughts about connections, but to make it even more clear, we will do an in-depth look at the violations for chains and small businesses.
+
+#### Violations between chains and small businesses
+
+<img src="img/violation_dist_csb.png"
+     alt="Inspection rates"
+     style="margin-right: 20px; width:500px;" />
+<div style="clear: both;"> </div>
+
+Violation 21 is clearly overrepresented in chains compared to small businesses, which corresponds to a lack of a certified food service manager when handling hazardous foods, such as deli meats, sandwiches, fish and many others.
+Small businesses are highly overrepresented in: violation 25, which corresponds to toxic items not stored properly, and violation 23, which concerns date labeling refrigerated food.
 
 <div style="text-align:center">
     <div style="float: left;">
