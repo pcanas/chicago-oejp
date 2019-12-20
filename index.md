@@ -67,7 +67,7 @@ The map on the left shows the income per zip and the one on the right the inspec
      style="float: center; margin-right: 20px; width:500px;" />
 
 Indeed, a strong negative correlation can be found between income and fail rate. 
-
+In addition to plotting for each zip code the income against the failure rate, we also binned them into groups of five to do bootstrap sampling, the averages of the bins are then connected with the cone being the 95 percent confidence interval. Besides the large confidence intervals we can still clearly make out a linear relationship. 
 <div style="clear: both;"> </div>
 
 However, drawing conclusion directly could be a bad idea. One option is that the data is biased.For example, inspectors might be biased against restaurants in low income areas, and target them with more inspections. 
@@ -94,7 +94,8 @@ There doesn't seem to be any clear bias with respect to the inspection frequency
      alt="Scatter Out Of Business"
      style="float: center; margin-right: 20px; width:500px;" />
 
-But we can still see that areas with a lower income have a higher rate of going out of business.
+The slightly lower average time for low income neighborhoods might be due to the higher rate of inspections that ended with the result "Out of Business". The plot to the right shows that restaurants fail more often in low income areas. In poorer neighborhoods running a profitable restaurants seems to be harder.
+
 
 <div style="clear: both;"> </div>
 
