@@ -75,7 +75,7 @@ All establishments get assigned to a risk group. There are three groups:
 - __Medium risk__
 - __Low risk__ 
 
-We will not look at the low risk group because they are so uncommon and so we don't have enough data on them.
+We will not look at the low risk group because they are so uncommon that we don't have enough data on them.
 
 <img src="img/scatter_inspectionFreq.png"
      alt="Inspection rates"
@@ -92,6 +92,7 @@ There doesn't seem to be any clear bias visible.
 <div style="clear: both;"> </div>
 
 But we still see that areas with a lower income have a higher rate of going out of business.
+WHY DO WE CARE? TEXT
 
 <div style="clear: both;"> </div> 
 
@@ -108,13 +109,15 @@ ADD SOME TEXT TO TALK ABOUT THIS
 
 Let's analyse the most common words from the violations:
 
+<div> Low income areas
 <img src="img/low_income_areas_wc.png"
      alt="Important violations"
-     style="float: left; margin-right: 20px; width:350px;" />
+     style="float: left; margin-right: 20px; width:350px;" /></div>
 
+<div> High income areas
 <img src="img/high_income_areas_wc.png"
      alt="Important violations"
-     style="float: right; margin-right: 20px; width:350px;" />
+     style="float: right; margin-right: 20px; width:350px;" /></div>
 
 <div style="clear: both;"> </div>
 
