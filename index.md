@@ -7,11 +7,7 @@ use-site-title: true
 
 <div style="text-align: justify" markdown="1">
 
-# Title
-
-A study on Food Security in Chicago
-
-# Abstract
+USA is a country who puts a large importance on food and has a very diverse food culture. We also have that Chicago is one of the most influential cities in the North American country. We want to combine these two insights in order to build an analysis on the food industry as it pertains to Chicago, but with a very specific viewpoint: we will look at how safe is to eat or buy food in Chicago. Specifically, we would like to focus on two main aspects: how can economic prosperity of an area influence in the frequency of inspections and violations, and an in-depth comparison between large franchises and small businesses. We believe that conclusions extracted from such study will help to better understand this outstanding city. Let's start off!
 
 
 ## Data-set
@@ -42,7 +38,6 @@ Below is an example with only the more relevant columns kept:
 
 As can be seen most of the data is has results that are either: <span style="background-color: #B3E0F3" markdown="1">__Pass__</span>, <span style="background-color: #87CEEC" markdown="1">__Pass w/ Conditions__</span> or <span style="background-color: #F3C6B3" markdown="1">__Fail__</span>. We will only be basing ourselves off that data.
 
-<div style="clear: both;"> </div>
 
 There are many different establishment types:
 - Restaurants make up __67%__ of the data.
