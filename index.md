@@ -120,16 +120,17 @@ We will slightly quantize the data by setting “Pass” as both “Pass” and 
      alt="Results for incomes"
      style="float: center; margin-right: 20px; width:350px;" />
 
-As expected from the scatter plot, high income areas have less failures, and are safer than low income areas. We now use these two groups for the violation analysis.
+As expected from the scatter plot, high income areas have less failures, and are safer than low income areas. We now use these two groups for the violation analysis. We choose the failure rate as the safety measurement, as a customer going to a restaurant that would fail an inspection is quite unsafe. We use the __Fischer exact test__, which gives us a p-value lower than 0.01. We can thus deduce from the plots above that restaurants in high income areas fail inspections less often and are safer.
 
-First we quickly see how their inspection results are distributed to get a rough idea about the data.
+First we quickly see how their inspection results are distributed to get a rough idea about the data. According to [City of Chicago](https://data.cityofchicago.org/api/assets/BAD5301B-681A-4202-9D25-51B2CAE672FF), critical violations are numbered 1-14, and serious violations are numbered 15-29. If these are found and fixed during the inspection, the inspection will pass with conditions. Otherwise it will fail. Therefore, we are only interested in the violations numbered 1-29. 
+
 The following plot shows the 5 violations that have the largest relative ratio between low and high income neighborhoods. We propose that this will indicate interesting differences in the problems a high income area has versus a low income area. 
 
 <div style="clear: both;"> </div>
 
 <img src="img/violation_dist_income.png"
      alt="Violation distribution for incomes"
-     style="margin-right: 20px; width:500px;" />
+     style="margin-right: 20px; width:700px;" />
 <div style="clear: both;"> </div>
 
 The Violations correspond to:
@@ -143,7 +144,7 @@ By looking at the distribution of violations for these two groups we find a few 
 - Low income areas have rodent-related violations more often, as well as with cold temperatures and procedures in case of customers getting food poisoned (hmm?).
 - High income areas have more issues with unclean personnel and working surfaces.
 
-We then use an NLP pipeline to extract which words are more common between the high and low income categories.
+We then use an NLP pipeline to extract which words are more common between the high and low income categories. To be able to compare the two categories, we look at the ratio between the relative frequencies. For example, if “mice” makes up 10% of the violation words in low income areas, and 2% in high income areas, the ratio will be 5. We visualize the words with the greatest ratios in the respective categories in word clouds:
 
 <div style="text-align:center">
     <div style="float: left;">
@@ -165,7 +166,7 @@ As we can see, low income areas have a much greater rodent problem than high inc
 So, we conclude that eating sushi in a high income area might be relatively risky, but you can be almost certain that you will not get any mice droppings on them at least.
 
 
-## Part 2: Chains vs Small Businesses
+## Part 2: Are restaurant chains safer than small businesses
 
 The concept of restaurant chains build upon a very simple idea: that you can get the same food regardless of where you buy it. A Big Mac in New York should taste the same as a Big Mac in Chicago. Also, quality between establishments should be the same, since the company has a reputation to live up to. Does this quality extend to food safety? Are there any differences in food safety between small businesses compared to chains?
 
@@ -173,11 +174,11 @@ We extracted the [list of food chains](https://en.wikipedia.org/wiki/List_of_res
 
 <p style="text-align:center"><img src="img/results_by_business_type.png" alt="Important violations" style="width:350px;"></p>
 
-<p style="padding: 0 130px;">We will now slightly quantize the data by setting <strong>“Pass”</strong> as both “Pass” and “Pass w/ Conditions”, and <strong>“Fail”</strong> as just “Fail”. The other rows are not connected to the safety of the establishment.</p>
+<p style="padding: 0 130px;">We will do the same quantization as before, and get:
 
 <p style="text-align:center"><img src="img/results_by_business_type2.png" alt="Important violations" style="width:350px;"></p>
 
-We choose the failure rate as the safety measurement, as a customer going to a restaurant that would fail an inspection is quite unsafe. Because the __Fischer exact test__ gives us a p-value lower than 0.01 we can deduce from the plots above that chains fail inspections less often and so are safer.
+We choose the failure rate as the safety measurement, as a customer going to a restaurant that would fail an inspection is quite unsafe. Here, the __Fischer exact test__ again gives us a p-value lower than 0.01, and again we can deduce from the plots above that chains fail inspections less often and are safer.
 
 
 ## Tying it together, are chains richer?
@@ -187,9 +188,9 @@ Given a connection between income and chains/small businesses, we should find a 
 
 <img src="img/chains_vs_income.png"
      alt="Inspection rates"
-     style="margin-right: 20px; width:500px;" />
+     style="margin-right: 20px; width:700px;" />
 
-We can see that there is no or a very weak correlation between income chain percentage, and we find a correlation of only 0.14.
+We can see that there is no or a very weak correlation between income chain percentage, and we find a correlation of only 0.14!
 
 For example, the area with the third highest concentration of restaurant chains, has the lowest income. In contrast to this, the area with the fourth highest concentration of restaurant chains has the second highest income!
 
@@ -199,7 +200,7 @@ This disproves eventual thoughts about connections, but to make it even more cle
 
 <img src="img/violation_dist_csb.png"
      alt="Inspection rates"
-     style="margin-right: 20px; width:500px;" />
+     style="margin-right: 20px; width:700px;" />
 <div style="clear: both;"> </div>
 
 Violation 21 is clearly overrepresented in chains compared to small businesses, which corresponds to a lack of a certified food service manager when handling hazardous foods, such as deli meats, sandwiches, fish and many others.
@@ -220,7 +221,9 @@ Small businesses are highly overrepresented in: violation 25, which corresponds 
 </div>
 <div style="clear: both;"> </div>
 
-Here we don’t see any great similarities either. You can find “droppings” in the small business cloud, but otherwise it is hard to distinguish any similarities. 
+Here we don’t see any great similarities to part 1 either. You can find “droppings” in the small business cloud, but otherwise it is hard to distinguish any similarities. We see connections to the violation 21 for chains, with sandwiches being the top word. Also, for small businesses, we can see that the labeling corresponding to violation 23. 
 
-From these results, we conclude that there must be different factors at play making high income areas and restaurant chains safer. 
+Here, we conclude that you'll maybe eat a sandwich which has not been overseen by a certified food manager, but you will not be poisoned by some toxic item or eat a refrigerated sandwich which date is due. 
+
+All in all, we conclude that there must be different factors at play making high income areas and restaurant chains safer. We also have an answer to the question. Chicago, your food is mostly safe, especially if you eat at an McDonalds in the city center.
 
