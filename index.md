@@ -69,6 +69,7 @@ From the maps it is easy to see that the few areas of high income seem to have a
 To be sure of this we looked at the connecion between failure rates and economic prosperity.
 
 <img src="img/scatter_incomeFail.pdf"
+     type="application/pdf"
      alt="Income and Fails scatter map"
      style="float: left; margin-right: 20px; width:350px;" />
 
