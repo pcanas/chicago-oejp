@@ -37,7 +37,7 @@ Below is an example with only the more relevant columns kept:
 
 <img src="img/results_distribution_stacked_bar.png"
      alt="Result Distribution"
-     style="float: right; margin-right: 20px; width:350px;" />
+     style="float: right; margin-right: 20px; width:200px;" />
 
 
 As can be seen most of the data is has results that are either: __Pass__, __Pass w/ Conditions__ or __Fail__. We will only be basing ourselves off that data.
@@ -60,7 +60,7 @@ We have compared inspections based on the [income for each zip code](https://tow
      style="float: left; margin-right: 20px; width:350px;" />
 <img src="img/failRate_map.png"
      alt="Fail Rate map"
-     style="float: right; margin-right: 20px; width:350px;" />
+     style="float: right; margin-left: 20px; width:350px;" />
 
 <div style="clear: both;"> </div>
 
@@ -68,15 +68,11 @@ From the maps it is easy to see that the few areas of high income seem to have a
 
 To be sure of this we looked at the connecion between failure rates and economic prosperity.
 
-<img src="img/scatter_incomeFail.png"
+<img src="img/first_risk.png"
      alt="Income and Fails scatter map"
-     style="float: left; margin-right: 20px; width:350px;" />
+     style="width:350px;" />
 
-<object data="img/scatter_incomeFail.pdf" type="application/pdf">
-    <embed src="img/scatter_incomeFail.pdf" type="application/pdf" />
-</object>
-
-We can see from the scatter plot on the left a clear linear relationship between income and failure rate. 
+We can see from the scatter plot on the left a clear linear relationship between income and failure rate within a risk type.
 
 <div style="clear: both;"> </div>
 
