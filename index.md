@@ -114,6 +114,7 @@ We firstly seperate the data into two parts:
      style="float: left; margin-right: 20px; width:350px;" />
 
 First we quickly see how their inspection results are distributed to get a rougth idea baout the data.
+The following plot shows the 5 violations that have the largest relative difference between low and high income neighborhoods.
 
 <div style="clear: both;"> </div>
 
@@ -121,6 +122,13 @@ First we quickly see how their inspection results are distributed to get a rougt
      alt="Violation distribution for incomes"
      style="margin-right: 20px; width:500px;" />
 <div style="clear: both;"> </div>
+
+The Violations correspond to:
+-Violation 5: Procedures for responding to vomiting and diarrheal events.
+-Violation 22: Proper cold holding temperatures.
+-Violation 19: Outside garbage waste grease and storage area; clean, rodent proof, all containers covered
+-Violation 16: Food-contact surfaces: cleaned & sanitized - comments:', '16. food-contact surfaces: cleaned & sanitized
+-Violation 8:  Hands clean & properly washed
 
 By looking at the distribution of violations for these two groups we find a few key differences:
 - Low imcome areas had rodent-related violations more often: eg: “No evidence of rodent or insect outer openings protected/rodent proofed, a written log shall be maintained available to the inspectors.”
