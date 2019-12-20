@@ -131,7 +131,9 @@ We then use an nlp pipeline to extract which words are more common between the h
 </div>
 <div style="clear: both;"> </div>
 
-TEXT ON WORD CLOUDS
+As we can see, low income areas have a much greater rodent problem than high income areas, given the great weight of the words “mice” and “droppings”. High income areas have problems concerning sushi, probably due to sushi being a more expensive meal, and sushi restaurants would not be expected to be found in low income areas.
+
+It seems that just quite simply restaurants with less financial means have more difficulty keeping a safe food environment.
 
 
 ## Part 2: Chains vs Businesses
