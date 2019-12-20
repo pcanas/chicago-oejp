@@ -22,7 +22,9 @@ Below is an example with only the more relevant columns kept:
 | 58. Allergen training as required - comments: noted certified food managers on duty with no allergen training certification. Instructed management that all food service managers are required to have the allergen training certification.|
 
 
-![Result distribution ](./img/results_distribution_stacked_bar.png)
+<img src="img/results_distribution_stacked_bar.png"
+     alt="Result Distribution"
+     style="float: right; margin-right: 20px; width:350px;" />
 
 
 As can be seen most of the data is has results that are either: __Pass__, __Pass w/ Conditions__ or __Fail__. We will only be basing ourselves off that data.
@@ -38,9 +40,12 @@ For the purpose of this work we look more closely at the restaurants.
 
 We have compared inspections based on the [income for each zip code](https://towardsdatascience.com/getting-census-data-in-5-easy-steps-a08eeb63995d)
 
-![Income Map](./img/income_map.png)
-![Fail Rate Map](./img/failRate_map.png)
-
+<img src="img/income_map.png"
+     alt="Income map"
+     style="float: left; margin-right: 20px; width:350px;" />
+<img src="img/failRate_map.png"
+     alt="Fail Rate map"
+     style="float: right; margin-right: 20px; width:350px;" />
 
 
 
