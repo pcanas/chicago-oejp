@@ -109,15 +109,16 @@ ADD SOME TEXT TO TALK ABOUT THIS
 
 Let's analyse the most common words from the violations:
 
-<div> Low income areas
-<img src="img/low_income_areas_wc.png"
-     alt="Important violations"
-     style="float: left; margin-right: 20px; width:350px;" /></div>
 
-<div> High income areas
-<img src="img/high_income_areas_wc.png"
+<img src="img/low_income_areas_wc.png"
+     title="Low income areas"
      alt="Important violations"
-     style="float: right; margin-right: 20px; width:350px;" /></div>
+     style="float: left; margin-right: 20px; width:350px;" />
+
+<img src="img/high_income_areas_wc.png"
+     title="High income areas"
+     alt="Important violations"
+     style="float: right; margin-right: 20px; width:350px;" />
 
 <div style="clear: both;"> </div>
 
@@ -125,7 +126,6 @@ TEXT ON WORD CLOUDS
 
 
 ## Part 2: Chains vs Businesses
-
 
 
 
