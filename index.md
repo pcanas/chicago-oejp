@@ -187,7 +187,7 @@ This disproves eventual thoughts about connections, but to make it even more cle
     <div style="float: right;">
      <b>Small Businesses</b>
      <br>
-     <img src="img/sb_sc.png" title="Small Businesses" alt="Word cloud for Small Businesses" style="margin-right: 20px; width:350px;">
+     <img src="img/sb_wc.png" title="Small Businesses" alt="Word cloud for Small Businesses" style="margin-right: 20px; width:350px;">
     </div>
 </div>
 <div style="clear: both;"> </div>
