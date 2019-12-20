@@ -130,15 +130,12 @@ The concept of restaurant chains build upon a very simple idea: that you can get
 
 We extracted the [list of food chains](https://en.wikipedia.org/wiki/List_of_restaurant_chains_in_the_United_States) from Wikipedia to find all the big restaurant chains in the United states. For the rest of the restaurants, we assume that they are privately owned restaurants with no association to a restaurant chain.
 
-<img src="img/results_by_business_type.png"
-     alt="Important violations"
-     style="float: left; margin-right: 20px; width:350px;" />
+<p style="text-align:center"><img src="img/results_by_business_type.png" alt="Important violations"></p>
 
-We slightly quantize the data by setting __"Pass"__ as both "Pass" and "Pass w/ Conditions", and "Fail" as just "Fail". The other rows are not connected to the safety of the establishment.
+<p style="padding: 0 130px;">We slightly quantize the data by setting <strong>“Pass”</strong> as both “Pass” and “Pass w/ Conditions”, and “Fail” as just “Fail”. The other rows are not connected to the safety of the establishment.</p>
 
-<img src="img/results_by_business_type2.png"
-     alt="Important violations"
-     style="float: left; margin-right: 20px; width:350px;" />
+<p style="text-align:center"><img src="img/results_by_business_type2.png" alt="Important violations" style="width:350px;"></p>
+
 
 We choose the failure rate as the safety measurement, as a customer going to a restaurant that would fail an inspection is unsafe. Because the __Fischer exact test__ gives us a p-value lower than 0.01 we can deduce from the plots above that chains fail inspections less often and so are safer.  
 
