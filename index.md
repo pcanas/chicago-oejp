@@ -72,8 +72,8 @@ To be sure of this we looked at the connecion between failure rates and economic
      alt="Income and Fails scatter map"
      style="float: left; margin-right: 20px; width:350px;" />
 
-<object data="img/scatter_incomeFail.png" type="application/pdf">
-    <embed src="img/scatter_incomeFail.png" type="application/pdf" />
+<object data="img/scatter_incomeFail.pdf" type="application/pdf">
+    <embed src="img/scatter_incomeFail.pdf" type="application/pdf" />
 </object>
 
 We can see from the scatter plot on the left a clear linear relationship between income and failure rate. 
