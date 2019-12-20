@@ -20,6 +20,7 @@ Below is an example with only the more relevant columns kept:
 |__Name__: _Chipotle Mexican Grill_|
 |---|
 |__Facility Type__: Restaurant|
+|__Risk__: High|
 |__Zip__: 60657|
 |__Results__: Pass w/ Conditions|
 |__Violations__: |
@@ -48,7 +49,7 @@ For the purpose of this work we only be considering restaurants.
 
 ## Part 1: Is richer safer ?
 
-We have compared inspections based on the [income for each zip code](https://towardsdatascience.com/getting-census-data-in-5-easy-steps-a08eeb63995d)
+We have compared inspections based on the [income for each zip code](https://towardsdatascience.com/getting-census-data-in-5-easy-steps-a08eeb63995d).
 
 <img src="img/income_map.png"
      alt="Income map"
@@ -59,21 +60,17 @@ We have compared inspections based on the [income for each zip code](https://tow
 
 <div style="clear: both;"> </div>
 
-The map on the left shows the income per zip and the one on the right the inspection fail rate per zip. We see that the two maps mirror themselves. There are three different areas with higher incomes areas with a low fail rate. 
-
+The map on the left shows the income per zip and the one on the right the inspection fail rate per zip. The two maps seem very similar, although inverted. For example, the city centre has areas with very high incomes, but low fail rates. Could there perhaps exist a relation? Let's plot the trend between income and fail rates!
 
 <img src="img/scatter_income.png"
      alt="Inspection rates"
-     style="float: left; margin-right: 20px; width:350px;" />
+     style="float: center; margin-right: 20px; width:500px;" />
 
-This relation can be seen more clearly by plotting the trend between income and inspection fail rates.
+Indeed, a strong negative correlation can be found between income and fail rate. 
 
 <div style="clear: both;"> </div>
 
-We will try and find out why this occurs.
-
-One option is that the data is biased.
-For example, inspectors might be biased against restaurants in low income areas. 
+However, drawing conclusion directly could be a bad idea. One option is that the data is biased.For example, inspectors might be biased against restaurants in low income areas, and target them with more inspections. 
 
 #### Are poorer areas more targeted by inspections?
 
@@ -95,23 +92,35 @@ There doesn't seem to be any clear bias with respect to the inspection frequency
 
 <img src="img/scatter_oob.png"
      alt="Scatter Out Of Business"
-     style="float: left; margin-right: 20px; width:500px;" />
+     style="float: center; margin-right: 20px; width:500px;" />
 
 But we can still see that areas with a lower income have a higher rate of going out of business.
 
 <div style="clear: both;"> </div>
 
-Another way to look at the data is to see the specific violations found during inspections.
+Since there is no bias to the inspection frequency, we simply conclude that higher income areas are safer, and that a customer grabbing some food in the city center has a lower risk of having a bad time than someone having lunch in the poorer areas.
 
-#### Checking the specific violations:
+So, what could be the problem if you would happen upon a failing restaurant? Analysing the violations column will tell us just that.
 
-We firstly seperate the data into two parts:
+### Checking the specific violations:
+
+We firstly separate the data into two groups:
 - the low income areas, the bottom 25%
 - the high income areas, the top 25%
 
+We plot the results for the different groups in a bar graph, to re-visualize the difference seen in the trend of the scatter plot.
+
 <img src="img/results_by_income_type1.png"
      alt="Results for incomes"
-     style="float: left; margin-right: 20px; width:350px;" />
+     style="float: center; margin-right: 20px; width:350px;" />
+
+We will slightly quantize the data by setting “Pass” as both “Pass” and “Pass w/ Conditions”, and “Fail” as just “Fail”. The other rows are not connected to the safety of the establishment.
+
+<img src="img/results_by_income_type2.png"
+     alt="Results for incomes"
+     style="float: center; margin-right: 20px; width:350px;" />
+
+As expected from the scatter plot, high income areas have less failures, and are safer than low income areas. We now use these two groups for the violation analysis.
 
 First we quickly see how their inspection results are distributed to get a rough idea about the data.
 The following plot shows the 5 violations that have the largest relative ratio between low and high income neighborhoods. We propose that this will indicate interesting differences in the problems a high income area has versus a low income area. 
@@ -124,15 +133,15 @@ The following plot shows the 5 violations that have the largest relative ratio b
 <div style="clear: both;"> </div>
 
 The Violations correspond to:
-- Violation 5: Procedures for responding to vomiting and diarrheal events.
-- Violation 22: Proper cold holding temperatures.
-- Violation 19: Outside garbage waste grease and storage area; clean, rodent proof, all containers covered
-- Violation 16: Food-contact surfaces: cleaned & sanitized
 - Violation 8:  Hands clean & properly washed
+- Violation 16: Food-contact surfaces: cleaned & sanitized
+- Violation 19: Outside garbage waste grease and storage area; clean, rodent proof, all containers covered
+- Violation 22: Proper cold holding temperatures.
+- Violation 5: Procedures for responding to vomiting and diarrheal events.
 
 By looking at the distribution of violations for these two groups we find a few key differences:
-- Low income areas had rodent-related violations more often: eg. “No evidence of rodent or insect outer openings protected/rodent proofed, a written log shall be maintained available to the inspectors.”
-- High income areas had more issues with unclean personnel and working surfaces.
+- Low income areas have rodent-related violations more often, as well as with cold temperatures and procedures in case of customers getting food poisoned (hmm?).
+- High income areas have more issues with unclean personnel and working surfaces.
 
 We then use an NLP pipeline to extract which words are more common between the high and low income categories.
 
@@ -151,9 +160,9 @@ We then use an NLP pipeline to extract which words are more common between the h
 </div>
 <div style="clear: both;"> </div>
 
-As we can see, low income areas have a much greater rodent problem than high income areas, given the great weight of the words “mice” and “droppings”. High income areas have more problems concerning sushi than low income areas, probably due to sushi being a more expensive meal, and sushi restaurants would not be expected to be found in low income areas.
+As we can see, low income areas have a much greater rodent problem than high income areas, given the great weight of the words “mice” and “droppings”. High income areas have more problems concerning sushi than low income areas, probably due to sushi being a more expensive meal, and sushi restaurants would not be expected to be found in low income areas. Also, this could be related to more strict rules concerning cleanliness in sushi restaurants, which restaurants in high income areas are more likely to violate. 
 
-It seems that just quite simply restaurants with less financial means have more difficulty keeping a safe food environment.
+So, we conclude that eating sushi in a high income area might be relatively risky, but you can be almost certain that you will not get any mice droppings on them at least.
 
 
 ## Part 2: Chains vs Small Businesses
