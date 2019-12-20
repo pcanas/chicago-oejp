@@ -66,26 +66,7 @@ We have compared inspections based on the [income for each zip code](https://tow
 
 From the maps it is easy to see that the few areas of high income seem to have a lower fail rate than the others.
 
-To be sure of this we looked at the connecion between failure rates and economic prosperity.
-
-<img src="img/first_risk.png"
-     alt="Income and Fails scatter map"
-     style="width:350px;" />
-
-We can see from the scatter plot on the left a clear linear relationship between income and failure rate within a risk type.
-
-<div style="clear: both;"> </div>
-
 There could be many ways this data is biased, for one the inspectors might be biased against restaurants in low income areas. To get a deeper look into this we looked at the actual violations that occurred. We saw the most noticeable difference for violation 18: “No evidence of rodent or insect outer openings protected/rodent proofed, a written log shall be maintained available to the inspectors”
-
-<img src="img/violationDistribution_important.png"
-     alt="Important violations"
-     style="float: right; margin-right: 20px; width:350px;" />
-
-In the graph beside we have the violations which show the most differences.
-ADD SOME TEXT TO TALK ABOUT THIS
-
-<div style="clear: both;"> </div>
 
 #### Are poorer areas more targeted by inspections?
 
@@ -96,24 +77,48 @@ All establishments get assigned to a risk group. There are three groups:
 
 We will not look at the low risk group because they are so uncommon and so we don't have enough data on them.
 
-<img src="img/inspectionRate.png"
+<img src="img/scatter_inspectionFreq.png"
      alt="Inspection rates"
-     style="float: right; margin-right: 20px; width:350px;" />
+     style="float: left; margin-right: 20px; width:350px;" />
 
-We looked at the average number of inspections per restaurant.
+On the graph beside we see the average time between inspection per establishment for every zip code.
+There doesn't seem to be any clear bias visible.
 
 <div style="clear: both;"> </div>
 
-We see that there are more controls in wealthy areas. This could however be incorrect in case there are many failing businesses in low income areas, that why next we look at the interval between inspections. This reduces this bias but businesses failing early on might still draw down low income neighborhoods. If we look at all the inspection with “out of business” as a result we can see a clear correlation between neighbourhood weath a the number of failing business. 
+<img src="img/scatter_oob.png"
+     alt="Inspection rates"
+     style="float: left; margin-right: 20px; width:350px;" />
+<div style="clear: both;"> </div>
 
+But we still see that areas with a lower income have a higher rate of going out of business.
 
+<div style="clear: both;"> </div> 
 
+# Checking the specific violations:
 
+<img src="img/violationDistribution_important.png"
+     alt="Important violations"
+     style="float: right; margin-right: 20px; width:350px;" />
 
+In the graph beside we have the violations which show the most differences.
+ADD SOME TEXT TO TALK ABOUT THIS
 
+<div style="clear: both;"> </div>
 
+Let's analyse the most common words from the violations:
 
+<img src="img/low_income_areas_wc.png"
+     alt="Important violations"
+     style="float: left; margin-right: 20px; width:350px;" />
 
+<img src="img/high_income_areas_wc.png"
+     alt="Important violations"
+     style="float: right; margin-right: 20px; width:350px;" />
+
+<div style="clear: both;"> </div>
+
+TEXT ON WORD CLOUDS
 
 
 
