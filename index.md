@@ -61,11 +61,13 @@ We have compared inspections based on the [income for each zip code](https://tow
 
 The map on the left shows the income per zip and the one on the right the inspection fail rate per zip. We see that the two maps mirror themselves. There are three different areas with higher incomes areas with a low fail rate. 
 
-To see this more clearly the following plot shows the trend between income and inspection fail rate.
 
 <img src="img/scatter_income.png"
      alt="Inspection rates"
      style="float: left; margin-right: 20px; width:350px;" />
+
+This relation can be seen more clearly by plotting the trend between income and inspection fail rates.
+
 <div style="clear: both;"> </div>
 
 We will try and find out why this occurs.
@@ -84,7 +86,7 @@ We do not look at the low risk group because they are so uncommon that not enoug
 
 <img src="img/scatter_income2.png"
      alt="Inspection rates"
-     style="margin-right: 20px; width:500px;" />
+     style="margin-right: 20px; width:800px;" />
 <div style="clear: both;"> </div>
 
 In the graph above we see the average time between inspection per establishment for every zip code.
@@ -94,9 +96,8 @@ There doesn't seem to be any clear bias with respect to the inspection frequency
 <img src="img/scatter_oob.png"
      alt="Inspection rates"
      style="float: left; margin-right: 20px; width:350px;" />
-<div style="clear: both;"> </div>
 
-But we still see that areas with a lower income have a higher rate of going out of business.
+But we can still see that areas with a lower income have a higher rate of going out of business.
 
 <div style="clear: both;"> </div>
 
@@ -144,12 +145,13 @@ We extracted the [list of food chains](https://en.wikipedia.org/wiki/List_of_res
 
 <p style="text-align:center"><img src="img/results_by_business_type.png" alt="Important violations" style="width:350px;"></p>
 
-<p style="padding: 0 130px;">We slightly quantize the data by setting <strong>“Pass”</strong> as both “Pass” and “Pass w/ Conditions”, and “Fail” as just “Fail”. The other rows are not connected to the safety of the establishment.</p>
+<p style="padding: 0 130px;">We will now slightly quantize the data by setting <strong>“Pass”</strong> as both “Pass” and “Pass w/ Conditions”, and <strong>“Fail”</strong> as just “Fail”. The other rows are not connected to the safety of the establishment.</p>
 
 <p style="text-align:center"><img src="img/results_by_business_type2.png" alt="Important violations" style="width:350px;"></p>
 
+We choose the failure rate as the safety measurement, as a customer going to a restaurant that would fail an inspection is quite unsafe. Because the __Fischer exact test__ gives us a p-value lower than 0.01 we can deduce from the plots above that chains fail inspections less often and so are safer.
 
-We choose the failure rate as the safety measurement, as a customer going to a restaurant that would fail an inspection is unsafe. Because the __Fischer exact test__ gives us a p-value lower than 0.01 we can deduce from the plots above that chains fail inspections less often and so are safer.  
+Like before we will take a look at the specific violations themselves.
 
 #### Violations between chains and businesses
 
