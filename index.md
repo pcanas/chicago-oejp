@@ -59,9 +59,19 @@ We have compared inspections based on the [income for each zip code](https://tow
 
 <div style="clear: both;"> </div>
 
-The ma on the left shows the income per zip and the one on the right the inspection fail rate per zip. We see that the two maps mirror themselves. There are three different areas with higher incomes areas with a low fail rate. Is this necessarily true or could it be due to some bias in the data? 
+The map on the left shows the income per zip and the one on the right the inspection fail rate per zip. We see that the two maps mirror themselves. There are three different areas with higher incomes areas with a low fail rate. 
 
-There could be many ways that bias could appear in the data. For example, inspectors might be biased against restaurants in low income areas. 
+To see this more clearly the following plot shows the trend between income and inspection fail rate.
+
+<img src="img/scatter_income.png"
+     alt="Inspection rates"
+     style="float: left; margin-right: 20px; width:350px;" />
+<div style="clear: both;"> </div>
+
+We will try and find out why this occurs.
+
+One option is that the data is biased.
+For example, inspectors might be biased against restaurants in low income areas. 
 
 #### Are poorer areas more targeted by inspections?
 
@@ -87,30 +97,18 @@ There doesn't seem to be any clear bias with respect to the inspection frequency
 <div style="clear: both;"> </div>
 
 But we still see that areas with a lower income have a higher rate of going out of business.
-Might this be related?
 
 <div style="clear: both;"> </div>
 
-<img src="img/scatter_income.png"
-     alt="Inspection rates"
-     style="float: left; margin-right: 20px; width:350px;" />
-<div style="clear: both;"> </div>
-
-To get a deeper look into this we look at the actual violations that occurred.
- We saw the most noticeable difference for violation 18: “No evidence of rodent or insect outer openings protected/rodent proofed, a written log shall be maintained available to the inspectors”
-
-
+Another way to look at the data is to see the specific violations found during inspections.
 
 #### Checking the specific violations:
 
-<img src="img/violationDistribution_important.png"
-     alt="Important violations"
-     style="float: right; margin-right: 20px; width:350px;" />
+By looking at the distribution of violations for low and high income areas we find a few key differences:
 
-In the graph beside we have the violations which show the most differences.
-ADD SOME TEXT TO TALK ABOUT THIS
+- Low imcome areas often had rodent-related violations: “No evidence of rodent or insect outer openings protected/rodent proofed, a written log shall be maintained available to the inspectors.”
 
-<div style="clear: both;"> </div>
+
 
 Let's analyse the most common words from the violations:
 
