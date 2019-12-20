@@ -96,7 +96,7 @@ WHY DO WE CARE? TEXT
 
 <div style="clear: both;"> </div> 
 
-# Checking the specific violations:
+#### Checking the specific violations:
 
 <img src="img/violationDistribution_important.png"
      alt="Important violations"
@@ -124,21 +124,42 @@ Let's analyse the most common words from the violations:
 TEXT ON WORD CLOUDS
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Part 2: Chains vs Businesses
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
