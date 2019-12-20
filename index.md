@@ -104,13 +104,17 @@ Another way to look at the data is to see the specific violations found during i
 
 #### Checking the specific violations:
 
-By looking at the distribution of violations for low and high income areas we find a few key differences:
+We firstly seperate the data into two parts:
+- the low income areas, the bottom 25%
+- the high income areas, the top 25%
 
-- Low imcome areas often had rodent-related violations: “No evidence of rodent or insect outer openings protected/rodent proofed, a written log shall be maintained available to the inspectors.”
+By looking at the distribution of violations for these two groups we find a few key differences:
+
+- Low imcome areas had rodent-related violations more often: eg: “No evidence of rodent or insect outer openings protected/rodent proofed, a written log shall be maintained available to the inspectors.”
+- High income areas had more
 
 
-
-Let's analyse the most common words from the violations:
+We then use an nlp pipeline to extract which words are more common between the high and low income categories.
 
 <div style="text-align:center">
     <div style="float: left;">
@@ -125,8 +129,6 @@ Let's analyse the most common words from the violations:
      <img src="img/high_income_areas_wc.png" title="High income areas" alt="Important violations" style="margin-right: 20px; width:350px;">
     </div>
 </div>
-
-
 <div style="clear: both;"> </div>
 
 TEXT ON WORD CLOUDS
