@@ -7,11 +7,7 @@ use-site-title: true
 
 <div style="text-align: justify" markdown="1">
 
-# Title
-
-A study on Food Security in Chicago
-
-# Abstract
+USA is a country who puts a large importance on food and has a very diverse food culture. We also have that Chicago is one of the most influential cities in the North American country. We want to combine these two insights in order to build an analysis on the food industry as it pertains to Chicago, but with a very specific viewpoint: we will look at how safe is to eat or buy food in Chicago. Specifically, we would like to focus on two main aspects: how can economic prosperity of an area influence in the frequency of inspections and violations, and an in-depth comparison between large franchises and small businesses. We believe that the conclusions extracted from such study will help to better understand this outstanding city. Let's start off!
 
 
 ## Data-set
@@ -42,7 +38,6 @@ Below is an example with only the more relevant columns kept:
 
 As can be seen most of the data is has results that are either: <span style="background-color: #B3E0F3" markdown="1">__Pass__</span>, <span style="background-color: #87CEEC" markdown="1">__Pass w/ Conditions__</span> or <span style="background-color: #F3C6B3" markdown="1">__Fail__</span>. We will only be basing ourselves off that data.
 
-<div style="clear: both;"> </div>
 
 There are many different establishment types:
 - Restaurants make up __67%__ of the data.
@@ -135,15 +130,12 @@ The concept of restaurant chains build upon a very simple idea: that you can get
 
 We extracted the [list of food chains](https://en.wikipedia.org/wiki/List_of_restaurant_chains_in_the_United_States) from Wikipedia to find all the big restaurant chains in the United states. For the rest of the restaurants, we assume that they are privately owned restaurants with no association to a restaurant chain.
 
-<img src="img/results_by_business_type.png"
-     alt="Important violations"
-     style="float: left; margin-right: 20px; width:350px;" />
+<p style="text-align:center"><img src="img/results_by_business_type.png" alt="Important violations" style="width:350px;"></p>
 
-We slightly quantize the data by setting __"Pass"__ as both "Pass" and "Pass w/ Conditions", and "Fail" as just "Fail". The other rows are not connected to the safety of the establishment.
+<p style="padding: 0 130px;">We slightly quantize the data by setting <strong>“Pass”</strong> as both “Pass” and “Pass w/ Conditions”, and “Fail” as just “Fail”. The other rows are not connected to the safety of the establishment.</p>
 
-<img src="img/results_by_business_type2.png"
-     alt="Important violations"
-     style="float: left; margin-right: 20px; width:350px;" />
+<p style="text-align:center"><img src="img/results_by_business_type2.png" alt="Important violations" style="width:350px;"></p>
+
 
 We choose the failure rate as the safety measurement, as a customer going to a restaurant that would fail an inspection is unsafe. Because the __Fischer exact test__ gives us a p-value lower than 0.01 we can deduce from the plots above that chains fail inspections less often and so are safer.  
 
